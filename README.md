@@ -1,5 +1,7 @@
 <div align="center">
 
+![NEXUS](cover.jpeg)
+
 # NEXUS
 
 ### *Something is coming.*
