@@ -1,8 +1,6 @@
 <div align="center">
 
-  ![Uploading image.png…]()
 
-<img src="docs/images/logo.svg" alt="NEXUS" width="120" />
 
 # NEXUS, Open Source AI Workspace
 
