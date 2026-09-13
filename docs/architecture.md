@@ -31,7 +31,7 @@ Web (Next.js) ──> Fastify API ──> @nexus/core services ──> Prisma �
 
 - The **web** app talks only to the **API** over REST.
 - The **CLI** talks only to the **API** over REST.
-- The **API** never calls provider SDKs directly — it uses the
+- The **API** never calls provider SDKs directly, it uses the
   `AIProvider` interface from `@nexus/ai`.
 - The **core** package owns all business rules and writes activity events.
 

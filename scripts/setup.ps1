@@ -1,8 +1,8 @@
-# NEXUS setup — Windows (PowerShell)
+# NEXUS setup, Windows (PowerShell)
 $ErrorActionPreference = "Stop"
 
 Write-Host ""
-Write-Host "  NEXUS — Open Source AI Workspace"
+Write-Host "  NEXUS, Open Source AI Workspace"
 Write-Host "  Special Anniversary Edition · Sep 13, 2026"
 Write-Host ""
 

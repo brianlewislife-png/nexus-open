@@ -59,7 +59,7 @@ export async function doctor(apiUrl?: string): Promise<void> {
       results.push({
         check: `${slug} provider`,
         status: 'WARN',
-        detail: `${envKey} not set — provider disabled`,
+        detail: `${envKey} not set, provider disabled`,
       });
     }
   }

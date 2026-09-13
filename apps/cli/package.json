@@ -2,7 +2,7 @@
   "name": "nexus-cli",
   "version": "0.1.0",
   "private": true,
-  "description": "Official NEXUS CLI — Open Source AI Workspace",
+  "description": "Official NEXUS CLI, Open Source AI Workspace",
   "bin": {
     "nexus": "./dist/index.js"
   },

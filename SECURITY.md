@@ -50,7 +50,7 @@ NEXUS is designed with the following security principles:
     `BROWSER`, `MCP`
 - Dangerous operations (terminal, network, browser) require explicit and
   deliberate configuration.
-- Workspace isolation is enforced — agents must not access files or execute
+- Workspace isolation is enforced, agents must not access files or execute
   commands outside their assigned workspace without explicit permission.
 
 ### API

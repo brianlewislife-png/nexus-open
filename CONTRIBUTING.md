@@ -71,14 +71,14 @@ to uphold this code.
 
 The repository is a Turborepo monorepo:
 
-- `apps/web` — Next.js frontend
-- `apps/api` — Fastify REST API
-- `apps/cli` — Official NEXUS CLI
-- `packages/core` — Business logic services
-- `packages/ai` — AI provider abstraction
-- `packages/database` — Prisma schema and seed
-- `packages/config` — Environment configuration
-- `packages/shared` — Shared types and utilities
+- `apps/web`, Next.js frontend
+- `apps/api`, Fastify REST API
+- `apps/cli`, Official NEXUS CLI
+- `packages/core`, Business logic services
+- `packages/ai`, AI provider abstraction
+- `packages/database`, Prisma schema and seed
+- `packages/config`, Environment configuration
+- `packages/shared`, Shared types and utilities
 
 ## How to contribute
 
@@ -125,7 +125,7 @@ solution, and any alternatives you considered.
 
 ## Style guide
 
-- **TypeScript** — strict mode, no `any` outside of clearly scoped
+- **TypeScript**, strict mode, no `any` outside of clearly scoped
   compatibility boundaries.
 - Naming: `camelCase` for functions/variables, `PascalCase` for types.
 - Follow the existing conventions in the file you are editing.
@@ -134,12 +134,12 @@ solution, and any alternatives you considered.
 
 ## Community
 
-- GitHub Issues — bug reports and feature requests
-- Discussions — ideas and questions
-- Announcements — official updates
+- GitHub Issues, bug reports and feature requests
+- Discussions, ideas and questions
+- Announcements, official updates
 
 ## Special Anniversary Edition
 
-NEXUS v0.1 "Special Anniversary Edition" honors **September 13, 2026** —
+NEXUS v0.1 "Special Anniversary Edition" honors **September 13, 2026**,
 release of the first public version by **Brian Lewis**. Contributors who land
 code before the release will be credited in the release notes.

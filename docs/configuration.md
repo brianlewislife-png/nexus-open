@@ -26,10 +26,10 @@ All NEXUS configuration happens through environment variables, centralized in
 A provider appears in the UI only when seeded (done by default) and becomes
 usable once its key is configured:
 
-- **OpenAI** — set `OPENAI_API_KEY`
-- **Google Gemini** — set `GEMINI_API_KEY`
-- **Mistral** — set `MISTRAL_API_KEY`
-- **Ollama** — set `OLLAMA_BASE_URL`; works with zero keys
+- **OpenAI**, set `OPENAI_API_KEY`
+- **Google Gemini**, set `GEMINI_API_KEY`
+- **Mistral**, set `MISTRAL_API_KEY`
+- **Ollama**, set `OLLAMA_BASE_URL`; works with zero keys
 
 Run `nexus doctor` to check which providers are configured.
 

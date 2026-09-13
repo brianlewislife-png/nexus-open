@@ -52,7 +52,7 @@ export function dim(text: string): void {
 export function banner(): void {
   process.stdout.write(
     pc.cyan(pc.bold('\n  NEXUS') +
-    pc.dim(' — Open Source AI Workspace\n'))
+    pc.dim(', Open Source AI Workspace\n'))
   );
   process.stdout.write(pc.dim('  Special Anniversary Edition · September 13, 2026\n') + '\n');
 }

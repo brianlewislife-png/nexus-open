@@ -19,10 +19,10 @@ Migration and seed run once on startup and exit.
 
 ## Healthchecks
 
-- postgres — `pg_isready`
-- redis — `redis-cli ping`
-- api — `wget /api/health`
-- web — `wget /`
+- postgres, `pg_isready`
+- redis, `redis-cli ping`
+- api, `wget /api/health`
+- web, `wget /`
 
 `depends_on: condition: service_healthy` keeps startup ordering correct.
 

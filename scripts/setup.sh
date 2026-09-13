@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# NEXUS setup — Linux / macOS
+# NEXUS setup, Linux / macOS
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
@@ -11,7 +11,7 @@ echo "  ██╔██╗ ██║█████╗   ╚███╔╝ █�
 echo "  ██║╚██╗██║██╔══╝   ██╔██╗ ██║   ██║╚════██║"
 echo "  ██║ ╚████║███████╗██╔╝ ██╗╚██████╔╝███████║"
 echo "  ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝"
-echo "  Open Source AI Workspace — Sep 13, 2026"
+echo "  Open Source AI Workspace, Sep 13, 2026"
 echo ""
 
 if [ ! -f .env ]; then

@@ -2,7 +2,7 @@
   "name": "nexus",
   "version": "0.1.0",
   "private": true,
-  "description": "NEXUS — Open Source AI Workspace",
+  "description": "NEXUS, Open Source AI Workspace",
   "author": "Brian Lewis",
   "license": "MIT",
   "workspaces": [

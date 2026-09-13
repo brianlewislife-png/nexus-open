@@ -1,7 +1,7 @@
 # Installation Guide
 
 NEXUS runs anywhere Docker runs: Linux, macOS and Windows. Everything is
-containerized by default — you only need Node.js for local development or to
+containerized by default, you only need Node.js for local development or to
 use the CLI.
 
 ## Requirements

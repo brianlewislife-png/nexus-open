@@ -2,7 +2,7 @@
 
 <img src="docs/images/logo.svg" alt="NEXUS" width="120" />
 
-# NEXUS — Open Source AI Workspace
+# NEXUS, Open Source AI Workspace
 
 **Stop switching between AI tools. Build in one place.**
 
@@ -11,7 +11,7 @@ tools, skills and development projects in one place.
 
 `Open Source` · `Self-Hosted` · `Multi-Provider`
 
-**🎂 Special Anniversary Edition — September 13, 2026**
+**🎂 Special Anniversary Edition, September 13, 2026**
 
 Created by **Brian Lewis**
 
@@ -48,26 +48,26 @@ organization and control** on top of them:
 
 ## Features
 
-- **Multi-provider AI abstraction** — OpenAI, Google Gemini, Mistral and
+- **Multi-provider AI abstraction**: OpenAI, Google Gemini, Mistral and
   Ollama behind a single `AIProvider` interface. Add new providers without
   rewriting the core.
-- **Agent management** — create, edit, duplicate and delete agents, assign
+- **Agent management**: create, edit, duplicate and delete agents, assign
   models, tools, skills, projects and system prompts.
-- **Explicit permission system** — filesystem, terminal, Git, network, browser
+- **Explicit permission system**: filesystem, terminal, Git, network, browser
   and MCP capabilities are never granted by default. Agents operate under
   explicit permissions only.
-- **Projects & context** — organize agents, sessions and context files per
+- **Projects & context**: organize agents, sessions and context files per
   project workspace.
-- **Sessions & chat** — a professional chat interface with tool activity
+- **Sessions & chat**: a professional chat interface with tool activity
   shown inline. Nothing important is ever hidden.
-- **Activity & logs** — every important event (session started, model used,
+- **Activity & logs**: every important event (session started, model used,
   tool executed, error) is recorded. Secrets are never logged.
-- **Skills** — versioned, authored skill definitions with instructions and
+- **Skills**: versioned, authored skill definitions with instructions and
   auxiliary files; architecture ready for a future catalog/marketplace.
-- **MCP** — configure MCP servers and associate them with agents/projects.
+- **MCP**: configure MCP servers and associate them with agents/projects.
   Every server can be treated as untrusted until you say otherwise.
-- **Official CLI** — manage the workspace from your terminal.
-- **Docker-first** — one command to start everything.
+- **Official CLI**: manage the workspace from your terminal.
+- **Docker-first**: one command to start everything.
 
 ## Supported AI Providers
 
@@ -201,7 +201,7 @@ See [CLI documentation](docs/cli.md).
 - Agents require **explicit permissions** for filesystem, terminal, Git,
   network, browser and MCP operations.
 - Endpoints are validated with zod and protected by rate limiting.
-- Workspace isolation is a first-class concern — dangerous tools cannot run
+- Workspace isolation is a first-class concern, dangerous tools cannot run
   without explicit control.
 
 See [SECURITY.md](SECURITY.md) for details and the responsible disclosure
@@ -241,7 +241,7 @@ Created by **Brian Lewis** released as the **Special Anniversary Edition** on
 
 <div align="center">
 
-**NEXUS — Open Source AI Workspace**
+**NEXUS, Open Source AI Workspace**
 
 Created by Brian Lewis · September 13, 2026
 
