@@ -234,7 +234,7 @@ Contributions are welcome! Read [CONTRIBUTING.md](CONTRIBUTING.md) and our
 
 ## Credits
 
-Created by **Brian Lewis** — released as the **Special Anniversary Edition** on
+Created by **Brian Lewis** released as the **Special Anniversary Edition** on
 **September 13, 2026**.
 
 ---
