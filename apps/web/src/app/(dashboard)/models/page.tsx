@@ -141,16 +141,16 @@ export default function ModelsPage() {
           </p>
           <ul className="list-inside list-disc space-y-1">
             <li>
-              <code className="text-indigo-300">OPENAI_API_KEY</code> — OpenAI
+              <code className="text-indigo-300">OPENAI_API_KEY</code> for OpenAI
             </li>
             <li>
-              <code className="text-indigo-300">GEMINI_API_KEY</code> — Google Gemini
+              <code className="text-indigo-300">GEMINI_API_KEY</code> for Google Gemini
             </li>
             <li>
-              <code className="text-indigo-300">MISTRAL_API_KEY</code> — Mistral
+              <code className="text-indigo-300">MISTRAL_API_KEY</code> for Mistral
             </li>
             <li>
-              <code className="text-indigo-300">OLLAMA_BASE_URL</code> — local Ollama server
+              <code className="text-indigo-300">OLLAMA_BASE_URL</code> for the local Ollama server
               (defaults to <code className="text-indigo-300">http://localhost:11434</code>)
             </li>
           </ul>

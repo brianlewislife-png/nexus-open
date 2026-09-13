@@ -68,7 +68,7 @@ export default function WelcomePage() {
         </div>
 
         <h1 className="mt-8 text-3xl font-bold tracking-tight md:text-5xl">
-          NEXUS —{" "}
+          NEXUS{" "}
           <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
             Open Source AI Workspace
           </span>
@@ -81,7 +81,7 @@ export default function WelcomePage() {
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-500">
           NEXUS connects models, agents, tools, skills and projects in a single,
           self-hosted space. Define your agents once, grant them precise
-          permissions, tie them to a project context and start working — across
+          permissions, tie them to a project context and start working across
           OpenAI, Gemini, Mistral and Ollama.
         </p>
 
@@ -137,7 +137,7 @@ export default function WelcomePage() {
       <footer className="relative z-10 flex flex-col items-center gap-1 border-t border-white/5 py-6 text-xs text-zinc-600">
         <div className="flex items-center gap-2">
           <Link2 className="h-3.5 w-3.5" />
-          <span>NEXUS — Open Source AI Workspace</span>
+          <span>NEXUS, Open Source AI Workspace</span>
         </div>
         <span>Created by Brian Lewis · September 13, 2026</span>
       </footer>

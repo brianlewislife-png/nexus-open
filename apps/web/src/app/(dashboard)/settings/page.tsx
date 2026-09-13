@@ -101,7 +101,7 @@ export default function SettingsPage() {
               </div>
               {resetDone && (
                 <p className="text-xs text-emerald-400">
-                  Done — NEXUS will show the welcome screen next time you open the dashboard.
+                  Done. NEXUS will show the welcome screen next time you open the dashboard.
                 </p>
               )}
             </CardContent>
@@ -116,7 +116,7 @@ export default function SettingsPage() {
             <CardContent className="space-y-3 text-sm">
               <div className="flex items-center justify-between">
                 <span className="text-muted-foreground">Product</span>
-                <span className="font-medium">NEXUS — Open Source AI Workspace</span>
+                <span className="font-medium">NEXUS, Open Source AI Workspace</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-muted-foreground">Version</span>

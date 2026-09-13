@@ -20,7 +20,7 @@ const features = [
     icon: Bot,
     title: "AI Agents",
     description:
-      "Create autonomous agents with precise permissions — file access, terminal, git, network and browser.",
+      "Create autonomous agents with precise permissions, file access, terminal, git, network and browser.",
   },
   {
     icon: Cpu,
@@ -126,7 +126,7 @@ export default function LandingPage() {
         <p className="mx-auto mt-4 max-w-3xl text-center text-zinc-400">
           NEXUS is a self-hosted control plane for AI work. Instead of juggling
           chat apps, code assistants and disconnected automations, you define
-          agents once — give them a model, scope them to a project and grant
+          agents once, give them a model, scope them to a project and grant
           the exact permissions they need to get work done.
         </p>
         <div className="mx-auto mt-12 grid gap-6 md:grid-cols-3">
@@ -157,7 +157,7 @@ export default function LandingPage() {
             {
               icon: GitBranch,
               title: "Granular permissions",
-              text: "Agents are sandboxed to the rights you grant. Read files, run commands or browse — on your terms.",
+              text: "Agents are sandboxed to the rights you grant. Read files, run commands or browse on your terms.",
             },
             {
               icon: Cpu,
@@ -276,7 +276,7 @@ export default function LandingPage() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-zinc-500 md:flex-row">
           <div className="flex items-center gap-2">
             <Hexagon className="h-4 w-4 text-indigo-400" />
-            <span>NEXUS — Open Source AI Workspace</span>
+            <span>NEXUS, Open Source AI Workspace</span>
           </div>
           <div className="flex items-center gap-1.5">
             Created by Brian Lewis with <Heart className="h-3.5 w-3.5 text-rose-500" /> · September 13, 2026

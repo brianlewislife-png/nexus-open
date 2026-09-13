@@ -126,7 +126,7 @@ export default function AgentDetailPage() {
             <CardContent className="flex flex-wrap gap-2">
               {granted.length === 0 ? (
                 <p className="text-sm text-muted-foreground">
-                  None — this agent can only call the model.
+                  None. This agent can only call the model.
                 </p>
               ) : (
                 granted.map((p) => (

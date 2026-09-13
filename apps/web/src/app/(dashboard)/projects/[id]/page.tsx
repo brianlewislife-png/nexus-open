@@ -91,7 +91,7 @@ export default function ProjectDetailPage() {
         </CardHeader>
         <CardContent>
           <div className="rounded-lg border border-white/[0.05] bg-black/30 px-4 py-3 font-mono text-sm text-indigo-200">
-            {project.directory || "No directory configured — virtual context"}
+            {project.directory || "No directory configured, virtual context"}
           </div>
           <p className="mt-3 text-xs text-muted-foreground">
             Sessions and agents bound to this project operate relative to this directory.

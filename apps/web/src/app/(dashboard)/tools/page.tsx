@@ -111,7 +111,7 @@ export default function ToolsPage() {
             <EmptyState
               icon={Wrench}
               title="No custom tools registered"
-              description="Tools in NEXUS are permission-gated capabilities. Filesystem, git and terminal are available through permissions — no separate tool installs required."
+              description="Tools in NEXUS are permission-gated capabilities. Filesystem, git and terminal are available through permissions. No separate tool installs required."
             />
           ) : null}
           <ToolGrid tools={tools.data.length > 0 ? tools.data : defaultTools} />
@@ -130,7 +130,7 @@ export default function ToolsPage() {
         <CardContent className="text-sm leading-relaxed text-muted-foreground">
           <p>
             NEXUS ships capability tools that gate access to the host environment. When you grant
-            an agent <code className="text-indigo-300">TERMINAL</code>, it can run shell commands —
+            an agent <code className="text-indigo-300">TERMINAL</code>, it can run shell commands, and
             the same tool applies regardless of the model behind the agent.
           </p>
           <ul className="mt-4 grid gap-2 sm:grid-cols-2">

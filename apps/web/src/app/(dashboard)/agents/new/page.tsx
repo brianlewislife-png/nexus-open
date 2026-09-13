@@ -100,7 +100,7 @@ function NewAgentForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!projectId) {
-      setError("A project is required — agents must be scoped to a project.");
+      setError("A project is required. Agents must be scoped to a project.");
       return;
     }
     setSaving(true);
@@ -207,13 +207,13 @@ function NewAgentForm() {
                         </SelectItem>
                       ))
                     ) : (
-                      <SelectItem value="none">No projects yet — create one first</SelectItem>
+                      <SelectItem value="none">No projects yet. Create one first</SelectItem>
                     )}
                   </SelectContent>
                 </Select>
               )}
               <p className="text-xs text-muted-foreground">
-                Agents are always scoped to a project — their sessions run in that project&apos;s context.
+                Agents are always scoped to a project. Their sessions run in that project&apos;s context.
               </p>
             </div>
             <div className="space-y-2">
@@ -263,7 +263,7 @@ function NewAgentForm() {
               <CardDescription>
                 {toolsApi.data.length > 0
                   ? "Tools registered on the API."
-                  : "Capability tools — permission-gated, activated on the agent."}
+                  : "Capability tools, permission-gated, activated on the agent."}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">

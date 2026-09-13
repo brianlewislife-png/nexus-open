@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NEXUS — Open Source AI Workspace",
+  title: "NEXUS, Open Source AI Workspace",
   description:
     "Stop switching between AI tools. Build in one place. NEXUS is an open source, self-hosted workspace for AI agents, models, tools and skills.",
 };
