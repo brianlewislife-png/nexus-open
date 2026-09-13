@@ -1,13 +1,47 @@
-# OS
-.DS_Store
-Thumbs.db
-Desktop.ini
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+next-env.d.ts
+.next/
+out/
+*.tsbuildinfo
+
+# Prisma (generated)
+packages/database/prisma/*.db
+packages/database/prisma/migrations/dev/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Turbo
+.turbo/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Editor
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
+.DS_Store
 
-# Logs
-*.log
+# OS
+Thumbs.db
+
+# Testing
+coverage/
+.nyc_output/

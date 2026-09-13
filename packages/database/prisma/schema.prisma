@@ -1,0 +1,243 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ───────────────────────────────────────────────────────────────────
+
+enum MessageRole {
+  user
+  assistant
+  system
+}
+
+enum SessionStatus {
+  active
+  paused
+  completed
+  failed
+}
+
+enum ActivityLevel {
+  info
+  warning
+  error
+  debug
+}
+
+enum ToolType {
+  builtin
+  custom
+  mcp
+}
+
+enum MCPServerStatus {
+  connected
+  disconnected
+  error
+}
+
+// ─── Models ──────────────────────────────────────────────────────────────────
+
+model User {
+  id        String   @id @default(cuid()) @map("id")
+  email     String   @unique @map("email")
+  name      String?  @map("name")
+  avatar    String?  @map("avatar")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  projects Project[]
+
+  @@map("users")
+}
+
+model Project {
+  id          String   @id @default(cuid()) @map("id")
+  name        String   @map("name")
+  description String?  @map("description")
+  directory   String?  @map("directory")
+  context     Json?    @map("context")
+  settings    Json?    @map("settings")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+  userId      String   @map("user_id")
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  agents   Agent[]
+  sessions Session[]
+
+  @@index([userId])
+  @@index([createdAt])
+  @@map("projects")
+}
+
+model Agent {
+  id           String   @id @default(cuid()) @map("id")
+  name         String   @map("name")
+  description  String?  @map("description")
+  systemPrompt String?  @map("system_prompt")
+  permissions  Json?    @map("permissions")
+  tools        Json?    @map("tools")
+  skills       Json?    @map("skills")
+  isActive     Boolean  @default(true) @map("is_active")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+  projectId String?  @map("project_id")
+  modelId   String?  @map("model_id")
+
+  project  Project?  @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  model    Model?    @relation(fields: [modelId], references: [id], onDelete: SetNull)
+  sessions Session[]
+
+  @@index([projectId])
+  @@index([modelId])
+  @@index([isActive])
+  @@map("agents")
+}
+
+model Provider {
+  id        String   @id @default(cuid()) @map("id")
+  name      String   @map("name")
+  slug      String   @unique @map("slug")
+  baseUrl   String?  @map("base_url")
+  isActive  Boolean  @default(true) @map("is_active")
+  config    Json?    @map("config")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  models Model[]
+
+  @@index([isActive])
+  @@map("providers")
+}
+
+model Model {
+  id         String   @id @default(cuid()) @map("id")
+  name       String   @map("name")
+  slug       String   @map("slug")
+  parameters Json?    @map("parameters")
+  isActive   Boolean  @default(true) @map("is_active")
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+  providerId String   @map("provider_id")
+
+  provider Provider @relation(fields: [providerId], references: [id], onDelete: Cascade)
+  agents   Agent[]
+
+  @@unique([providerId, slug])
+  @@index([providerId])
+  @@index([isActive])
+  @@map("models")
+}
+
+model Session {
+  id        String        @id @default(cuid()) @map("id")
+  title     String?       @map("title")
+  status    SessionStatus @default(active) @map("status")
+  createdAt DateTime      @default(now()) @map("created_at")
+  updatedAt DateTime      @updatedAt @map("updated_at")
+  agentId   String        @map("agent_id")
+  projectId String?       @map("project_id")
+
+  agent    Agent     @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  project  Project?  @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  messages Message[]
+
+  @@index([agentId])
+  @@index([projectId])
+  @@index([status])
+  @@index([createdAt])
+  @@map("sessions")
+}
+
+model Message {
+  id        String      @id @default(cuid()) @map("id")
+  content   String      @map("content")
+  role      MessageRole @map("role")
+  metadata  Json?       @map("metadata")
+  createdAt DateTime    @default(now()) @map("created_at")
+  sessionId String      @map("session_id")
+
+  session Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@index([sessionId])
+  @@index([role])
+  @@index([createdAt])
+  @@map("messages")
+}
+
+model Tool {
+  id          String   @id @default(cuid()) @map("id")
+  name        String   @map("name")
+  description String?  @map("description")
+  type        ToolType @default(builtin) @map("type")
+  config      Json?    @map("config")
+  permissions Json?    @map("permissions")
+  isActive    Boolean  @default(true) @map("is_active")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@index([type])
+  @@index([isActive])
+  @@map("tools")
+}
+
+model Skill {
+  id           String   @id @default(cuid()) @map("id")
+  name         String   @map("name")
+  description  String?  @map("description")
+  version      String?  @map("version")
+  author       String?  @map("author")
+  instructions String?  @map("instructions")
+  files        Json?    @map("files")
+  metadata     Json?    @map("metadata")
+  isActive     Boolean  @default(true) @map("is_active")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@index([isActive])
+  @@map("skills")
+}
+
+model MCPServer {
+  id          String          @id @default(cuid()) @map("id")
+  name        String          @map("name")
+  url         String          @map("url")
+  status      MCPServerStatus @default(disconnected) @map("status")
+  permissions Json?           @map("permissions")
+  config      Json?           @map("config")
+  createdAt   DateTime        @default(now()) @map("created_at")
+  updatedAt   DateTime        @updatedAt @map("updated_at")
+
+  @@index([status])
+  @@map("mcp_servers")
+}
+
+model ActivityLog {
+  id         String        @id @default(cuid()) @map("id")
+  action     String        @map("action")
+  entityType String        @map("entity_type")
+  entityId   String        @map("entity_id")
+  details    Json?         @map("details")
+  level      ActivityLevel @default(info) @map("level")
+  createdAt  DateTime      @default(now()) @map("created_at")
+
+  @@index([entityType, entityId])
+  @@index([level])
+  @@index([createdAt])
+  @@map("activity_logs")
+}
+
+model Setting {
+  id        String   @id @default(cuid()) @map("id")
+  key       String   @unique @map("key")
+  value     Json     @map("value")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("settings")
+}
