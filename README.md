@@ -1,5 +1,6 @@
 <div align="center">
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/75407450-bc22-430b-9a71-e07b31415c54" />
 
 
 # NEXUS, Open Source AI Workspace
